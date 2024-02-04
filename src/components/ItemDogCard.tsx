@@ -1,23 +1,30 @@
 
 
 import { Text, View, Image } from 'react-native'
-import React from 'react'
+import React,{PropsWithChildren} from 'react'
 import styles from './itemDogCard.style'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { COLORS } from '../constants'
 import GenderTag from './GenderTag'
+import { Dog } from '../data/Dog'
 
-const ItemDogCard = () => {
+
+
+type  ItemDogCardProps = PropsWithChildren<{
+  dog:Dog
+}>
+
+const ItemDogCard = ({dog}:ItemDogCardProps) => {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.contentContainer}>
-        <Image source={require('../../assets/images/orange_dog.png')} style={styles.image} />
+        <Image source={dog.image} style={styles.image} />
         <View style={styles.detailsText}>
-          <Text style = {styles.nameText}>Parkinson</Text>
-          <Text style = {styles.activityText}>2yrs| Playful</Text>
+          <Text style = {styles.nameText}>{dog.name}</Text>
+          <Text style = {styles.activityText}>{dog.age} yrs| {dog.gender}</Text>
           <View style = {styles.locationContent}>
             <Icon name='location-on' size={16} color={COLORS.RED} />
-            <Text style  = {styles.locationText}> 381 away </Text>
+            <Text style  = {styles.locationText}>{dog.location}</Text>
           </View>
         </View>
         <View style= {styles.genderTag}>

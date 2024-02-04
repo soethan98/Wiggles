@@ -1,3 +1,4 @@
+import { ImageProps, ImageSourcePropType } from "react-native";
 import { Owner } from "./owner";
 
 export interface Dog {
@@ -8,7 +9,7 @@ export interface Dog {
     color: string,
     weight: number,
     location: string,
-    image: string,
+    image: ImageSourcePropType,
     about: string,
 
 }
