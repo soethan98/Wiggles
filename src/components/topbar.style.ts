@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
     },
     appBarTitle:{
         color:COLORS.pinkText,
-        fontFamily:'bold',
+        fontFamily:'Sailec-Bold',
         fontWeight:'600',
         fontSize:24
       
     },
     appBarSubtitle:{
         color:COLORS.pinkText,
-        fontFamily:'medium',
+        fontFamily:'Sailec-Regular',
         fontWeight:'500',
         fontSize:16
     },

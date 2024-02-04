@@ -12,7 +12,9 @@ const COLORS = {
     blueText:'#1E3054',
     pinkText:'#F5CAC9',
     card:'#FFFFFF',
-    cardNight:'#162544'
+    cardNight:'#162544',
+    RED:'#EB5757',
+    blue:"#006AF6"
 
 }
 
