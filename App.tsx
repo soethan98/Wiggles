@@ -14,11 +14,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Home from './src/screens/Home'
 import Details from './src/screens/Details'
+import { Dog } from './src/data/Dog';
 
 
 export type MainNavParamList = {
   Home:undefined,
-  Details:undefined
+  Details:{dog:Dog}
 }
 const Stack = createNativeStackNavigator<MainNavParamList>()
 
@@ -33,7 +34,10 @@ export default function App() {
         options={{
           headerShown:false
         }}/>
-        <Stack.Screen name='Details' component={Details}/>
+        <Stack.Screen name='Details' component={Details}
+        options={{
+          headerShown:false
+        }}/>
 
       </Stack.Navigator>
      </NavigationContainer>

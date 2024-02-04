@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { MainNavParamList } from '../../App'
@@ -21,7 +21,14 @@ export default function Home({ navigation }: HomeProps) {
            data={dogs} 
         keyExtractor={item => item.id.toString()}
            renderItem={({item}) => (
+            <Pressable onPress={() => {
+                navigation.push("Details",{
+                    dog:item
+                })
+            }}>
             <ItemDogCard dog={item}/>
+
+            </Pressable>
            )}
           />
         </View>

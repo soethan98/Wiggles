@@ -2,17 +2,22 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { MainNavParamList } from '../../App'
+import DetailsImageBackdrop from '../components/DetailsImageBackdrop'
+import styles from './details.style'
+import { COLORS } from '../constants'
 
 
 
-type DetailProps = NativeStackScreenProps<MainNavParamList, "Details">
+export type DetailProps = NativeStackScreenProps<MainNavParamList, "Details">
 
-export default function Details() {
+const Details = ({ navigation, route }: DetailProps) => {
+    const { dog } = route.params
     return (
-        <View>
-            <Text>Details</Text>
+        <View style = {styles.container}>
+            <DetailsImageBackdrop image={dog.image} navigation={navigation} />
         </View>
     )
 }
 
-const styles = StyleSheet.create({})
+
+export default Details
