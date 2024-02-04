@@ -14,7 +14,8 @@ const COLORS = {
     card:'#FFFFFF',
     cardNight:'#162544',
     RED:'#EB5757',
-    blue:"#006AF6"
+    blue:"#006AF6",
+   text:'#F5CAC9',
 
 }
 
