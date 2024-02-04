@@ -33,14 +33,10 @@ const styles = StyleSheet.create({
         color: COLORS.pinkText
     },
     activityText: {
-        fontSize: 12,
-        fontFamily: 'Sailec-Medium',
-        fontWeight: 'normal',
-        color: COLORS.pinkText,
+  
         paddingTop:12
 
     },
-    locationIcon: {},
     locationContent: {
         flexDirection: 'row',
         paddingTop: 12
@@ -48,15 +44,13 @@ const styles = StyleSheet.create({
     locationText: {
         paddingLeft: 8,
         paddingRight: 12,
-        fontSize: 12,
-        fontFamily: 'Sailec-Medium',
-        fontWeight: 'normal',
-        color: COLORS.pinkText,
+     
     },
     genderTag: {
         justifyContent:'space-between'
     },
-    agoText:{
+ 
+    baseText:{
         fontSize: 12,
         fontFamily: 'Sailec-Medium',
         fontWeight: 'normal',

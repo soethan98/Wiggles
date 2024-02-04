@@ -21,15 +21,15 @@ const ItemDogCard = ({dog}:ItemDogCardProps) => {
         <Image source={dog.image} style={styles.image} />
         <View style={styles.detailsText}>
           <Text style = {styles.nameText}>{dog.name}</Text>
-          <Text style = {styles.activityText}>{dog.age} yrs| {dog.gender}</Text>
+          <Text style = {[styles.activityText,styles.baseText]}>{dog.age} yrs| {dog.gender}</Text>
           <View style = {styles.locationContent}>
             <Icon name='location-on' size={16} color={COLORS.RED} />
-            <Text style  = {styles.locationText}>{dog.location}</Text>
+            <Text style  = {[styles.locationText,styles.baseText]}>{dog.location}</Text>
           </View>
         </View>
         <View style= {styles.genderTag}>
-          <GenderTag/>
-          <Text style = {styles.agoText}>12 min ago</Text>
+          <GenderTag gender={dog.gender}/>
+          <Text style = {styles.baseText}>12 min ago</Text>
         </View>
       </View>
 

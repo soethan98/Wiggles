@@ -16,7 +16,7 @@ export default function Home({ navigation }: HomeProps) {
     return (
         <View style = {styles.mainContainer}>
            <TopBar/>
-           <Text>Nearby results</Text>
+           <Text style = {styles.nearByText}>Nearby results</Text>
            <FlatList
            data={dogs} 
         keyExtractor={item => item.id.toString()}
