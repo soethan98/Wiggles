@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Sailec-Bold.otf",
+      "sha1": "d4a23f20c732ac777d2fc7bf9ad78216bd599708"
+    },
+    {
+      "path": "assets/fonts/Sailec-Medium.otf",
+      "sha1": "527a063d9a7720d66a8fc190fdcf836ff88d6bea"
+    },
+    {
+      "path": "assets/fonts/Sailec-Regular.otf",
+      "sha1": "350702dd48ca7166c17d4c1cbbf248da0f801e39"
+    }
+  ]
+}
