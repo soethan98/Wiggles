@@ -9,8 +9,10 @@ const styles = StyleSheet.create({
         backgroundColor:COLORS.blueBGNight
     },
     storyContainer:{
-        marginTop:24,
-        marginBottom:24
+        marginTop:SIZES.medium,
+        marginBottom:24,
+        paddingStart:SIZES.medium,
+        paddingTop:SIZES.medium,
 
     },
     aboutMeLabel:{
@@ -24,8 +26,6 @@ const styles = StyleSheet.create({
     },
     storyText:{
         color:COLORS.pinkText,
-        marginTop:SIZES.medium,
-        paddingStart:SIZES.medium,
         paddingTop:SIZES.medium,
         fontSize:14,
         fontFamily:'Sailec-Medium',

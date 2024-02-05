@@ -8,6 +8,8 @@ import { COLORS } from '../constants'
 import InfoCard from '../components/InfoCard'
 import DogInfoCard from '../components/DogInfoCard'
 import QuickInfo from '../components/QuickInfo'
+import OwnerInfo from '../components/OwnerInfo'
+import DetailTitle from '../components/DetailTitle'
 
 
 
@@ -21,11 +23,11 @@ const Details = ({ navigation, route }: DetailProps) => {
                 <DetailsImageBackdrop image={dog.image} navigation={navigation} />
                 <DogInfoCard dog={dog}/>
                 <View style = {styles.storyContainer}>
-                    <Text style = {styles.aboutMeLabel}>About Me</Text>
+                    <DetailTitle  title='About Me' />
                     <Text style = {styles.storyText}>{dog.about}</Text>
                 </View>
                 <QuickInfo dog={dog} />
-
+                <OwnerInfo />
             </View>
         </ScrollView>
 

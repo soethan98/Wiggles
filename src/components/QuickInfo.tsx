@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './quickInfo.style'
 import InfoCard from './InfoCard'
 import { Dog } from '../data/Dog'
+import DetailTitle from './DetailTitle'
 
 type QuickInfoProps = {
   dog:Dog
@@ -11,7 +12,7 @@ type QuickInfoProps = {
 const QuickInfo = ({dog}:QuickInfoProps) => {
   return (
     <View style = {styles.container}>
-      <Text style = {styles.label}>QuickInfo</Text>
+      <DetailTitle title="QuickInfo"/>
       <View style = {styles.infoCardContainer}>
         <InfoCard title='Age' value={dog.age.toString().concat(' yrs')}/>
         <InfoCard title='Color' value={dog.color}/>
