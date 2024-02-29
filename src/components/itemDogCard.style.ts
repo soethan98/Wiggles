@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../constants";
+import { TColors } from "../theme/colors";
 
 
-const styles = StyleSheet.create({
+const createStyles = (colors:TColors) => StyleSheet.create({
     cardContainer: {
-        backgroundColor: COLORS.cardNight,
+        backgroundColor: colors.surface,
         padding: SIZES.xSmall,
         borderRadius: SIZES.medium,
         margin: SIZES.medium
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Sailec-Medium',
         fontWeight: '500',
-        color: COLORS.pinkText
+        color: colors.textPrimary
     },
     activityText: {
   
@@ -54,10 +55,10 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontFamily: 'Sailec-Medium',
         fontWeight: 'normal',
-        color: COLORS.pinkText,
+        color: colors.textPrimary,
     }
 
 })
 
 
-export default styles
+export default createStyles

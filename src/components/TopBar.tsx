@@ -3,8 +3,12 @@ import React from 'react'
 import styles from './topbar.style'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { COLORS } from '../constants'
+import useStyles from '../theme/useStyles'
+import createStyles from './topbar.style'
 
 const TopBar = () => {
+
+    const {colors,styles} = useStyles(createStyles)
     return (
         <View style={styles.appBarContainer}>
             <View style={styles.appBarTextContainer}>

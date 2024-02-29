@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import { COLORS, SIZES } from '../constants'
+import { TColors } from '../theme/colors'
 
 
-const styles = StyleSheet.create({
+const createStyles = (colors:TColors) =>  StyleSheet.create({
     appBarContainer:{
         flexDirection:'row',
         alignItems:'center',
-        margin:SIZES.medium
+        margin:SIZES.medium,
 
     },
     appBarTextContainer:{
@@ -17,14 +18,14 @@ const styles = StyleSheet.create({
 
     },
     appBarTitle:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         fontFamily:'Sailec-Bold',
         fontWeight:'600',
         fontSize:24
       
     },
     appBarSubtitle:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         fontFamily:'Sailec-Regular',
         fontWeight:'500',
         fontSize:16
@@ -34,4 +35,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default styles
+export default createStyles

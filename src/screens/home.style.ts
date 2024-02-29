@@ -1,17 +1,18 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../constants";
+import { TColors } from "../theme/colors";
 
 
-const styles = StyleSheet.create({
+const createStyles =(colors:TColors) =>  StyleSheet.create({
     mainContainer:{
         flex:1,
-        backgroundColor:COLORS.blueBGNight
+        backgroundColor:colors.background
     },
     nearByText : {
         fontSize: 14,
         fontFamily: 'Sailec-Bold',
         fontWeight: '500',
-        color: COLORS.pinkText,
+        color: colors.textPrimary,
         marginStart:16,
         marginTop:16,
         
@@ -19,4 +20,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default styles;
+export default createStyles;

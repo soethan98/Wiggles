@@ -7,6 +7,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import { COLORS } from '../constants'
 import GenderTag from './GenderTag'
 import { Dog } from '../data/Dog'
+import useStyles from '../theme/useStyles'
+import createStyles from './itemDogCard.style'
 
 
 
@@ -15,6 +17,7 @@ type  ItemDogCardProps = PropsWithChildren<{
 }>
 
 const ItemDogCard = ({dog}:ItemDogCardProps) => {
+  const {colors,styles} = useStyles(createStyles)
   return (
     <View style={styles.cardContainer}>
       <View style={styles.contentContainer}>

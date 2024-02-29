@@ -7,12 +7,16 @@ import TopBar from '../components/TopBar'
 import GenderTag from '../components/GenderTag'
 import ItemDogCard from '../components/ItemDogCard'
 import dogs from '../data/Dogs'
+import useStyles from '../theme/useStyles'
+import createStyles from './home.style'
 
 
 
 type HomeProps = NativeStackScreenProps<MainNavParamList, "Home">
 
 export default function Home({ navigation }: HomeProps) {
+
+    const {colors,styles} = useStyles(createStyles)
     return (
         <View style = {styles.mainContainer}>
            <TopBar/>
