@@ -158,3 +158,5 @@ vendor/
 .circleci/storage
 
 android/app/build
+
+*.apk
