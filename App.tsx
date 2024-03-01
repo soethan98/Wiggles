@@ -2,6 +2,7 @@
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import {
+  Appearance,
   StyleSheet,
   Text,
   View,
