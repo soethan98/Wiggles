@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { AppThemeContext } from "./ThemeContext";
 
 interface ColorType{
-    colors:TColors;
-    applyColors:(colors:TColors) => void;
+    color:TColors;
+    applyColor:(colors:TColors) => void;
 }
 
 
@@ -16,8 +16,8 @@ const useColors = ():ColorType => {
         
     }
     return {
-        colors:store.colors,
-        applyColors:store.applyColors
+        color:store.color,
+        applyColor:store.applyColor
     };
 };
 

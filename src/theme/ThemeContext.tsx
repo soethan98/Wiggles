@@ -3,27 +3,24 @@ import React, { PropsWithChildren, createContext, useState } from 'react';
 
 
 type AppThemeContextType = {
-    colors: TColors;
-    applyColors: (colors: TColors) => void
+    color: TColors;
+    applyColor: (colors: TColors) => void
 }
 
-export const AppThemeContext = createContext<AppThemeContextType | undefined>({
-    colors: Colors.light,
-    applyColors: (colors:TColors) => {}
-});
+export const AppThemeContext = createContext<AppThemeContextType | undefined>(undefined);
 
 
 
 const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [colors, setColors] = useState<TColors>(Colors.dark);
+    const [color, setColor] = useState<TColors>(Colors.light);
 
-    const applyColors = (colorTheme: TColors) => {
-        setColors(colorTheme)
+    const applyColor = (colorTheme: TColors) => {
+        setColor(colorTheme)
     }
 
     const value = {
-        colors: colors,
-        applyColors: applyColors
+        color: color,
+        applyColor: applyColor
     };
 
     return (<AppThemeContext.Provider value={value}>

@@ -12,9 +12,9 @@ interface Styles<T extends StyleSheet.NamedStyles<T>>{
 export default function<T extends StyleSheet.NamedStyles<T>>(
     createStyle: (colors: TColors) => T,
 ):Styles<T>{
-    const {colors} = useColors();
+    const {color} = useColors();
     return {
-        colors: colors,
-        styles: useMemo(() => createStyle(colors), [colors, createStyle]),
+        colors: color,
+        styles: useMemo(() => createStyle(color), [color, createStyle]),
       };
 }
