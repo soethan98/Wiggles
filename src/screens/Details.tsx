@@ -10,6 +10,8 @@ import DogInfoCard from '../components/DogInfoCard'
 import QuickInfo from '../components/QuickInfo'
 import OwnerInfo from '../components/OwnerInfo'
 import DetailTitle from '../components/DetailTitle'
+import useStyles from '../theme/useStyles'
+import createStyles from './details.style'
 
 
 
@@ -17,13 +19,14 @@ export type DetailProps = NativeStackScreenProps<MainNavParamList, "Details">
 
 const Details = ({ navigation, route }: DetailProps) => {
     const { dog } = route.params
+    const {colors,styles} = useStyles(createStyles)
     return (
         <ScrollView style={styles.container}>
             <View>
                 <DetailsImageBackdrop image={dog.image} navigation={navigation} />
                 <DogInfoCard dog={dog}/>
                 <View style = {styles.storyContainer}>
-                    <DetailTitle  title='About Me' />
+                    <DetailTitle  title='About Me'  />
                     <Text style = {styles.storyText}>{dog.about}</Text>
                 </View>
                 <QuickInfo dog={dog} />

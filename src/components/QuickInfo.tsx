@@ -4,12 +4,16 @@ import styles from './quickInfo.style'
 import InfoCard from './InfoCard'
 import { Dog } from '../data/Dog'
 import DetailTitle from './DetailTitle'
+import useStyles from '../theme/useStyles'
+import createStyles from './quickInfo.style'
 
 type QuickInfoProps = {
   dog:Dog
 }
 
 const QuickInfo = ({dog}:QuickInfoProps) => {
+  const {colors,styles} = useStyles(createStyles)
+
   return (
     <View style = {styles.container}>
       <DetailTitle title="QuickInfo"/>

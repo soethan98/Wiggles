@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../constants";
+import { TColors } from "../theme/colors";
 
 
-const styles = StyleSheet.create({
+const createStyles = (colors:TColors) => StyleSheet.create({
     container:{
         padding:SIZES.medium
     },
@@ -24,13 +25,13 @@ const styles = StyleSheet.create({
         paddingStart:SIZES.medium
     },
     ownerName:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         fontFamily: 'Sailec-Medium',
         fontWeight: '600',
         fontSize: 14
     },
     ownerRole:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         fontFamily: 'Sailec-Medium',
         fontWeight: '400',
         fontSize: 14
@@ -45,4 +46,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default styles
+export default createStyles

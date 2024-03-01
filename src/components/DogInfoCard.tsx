@@ -4,12 +4,16 @@ import { Dog } from '../data/Dog'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { COLORS } from '../constants'
 import GenderTag from './GenderTag'
+import useStyles from '../theme/useStyles'
+import { create } from 'react-test-renderer'
+import { TColors } from '../theme/colors'
 
 type dogInfoProps = {
     dog: Dog
 }
 
 const DogInfoCard = ({ dog }: dogInfoProps) => {
+    const {colors,styles} = useStyles(createStyles)
     return (
         <View style={styles.container}>
             <View>
@@ -34,7 +38,7 @@ const DogInfoCard = ({ dog }: dogInfoProps) => {
 
 export default DogInfoCard
 
-const styles = StyleSheet.create({
+const createStyles = (colors:TColors) => StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontFamily: 'Sailec-Medium',
         fontWeight: 'normal',
-        color: COLORS.pinkText,
+        color: colors.textPrimary,
     },
     locationText: {
         paddingLeft: 8,
@@ -59,7 +63,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Sailec-Bold',
         fontSize: 24,
-        color: COLORS.pinkText,
+        color: colors.textPrimary,
 
     },
     activityContainer:{

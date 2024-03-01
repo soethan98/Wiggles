@@ -15,7 +15,7 @@ export const AppThemeContext = createContext<AppThemeContextType | undefined>({
 
 
 const AppThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [colors, setColors] = useState<TColors>(Colors.light);
+    const [colors, setColors] = useState<TColors>(Colors.dark);
 
     const applyColors = (colorTheme: TColors) => {
         setColors(colorTheme)

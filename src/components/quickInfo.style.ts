@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../constants";
+import { TColors } from "../theme/colors";
 
-const styles = StyleSheet.create({
+const createStyles =(colors:TColors) =>  StyleSheet.create({
 
   container: {
     padding: SIZES.medium
@@ -14,4 +15,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default styles
+export default createStyles

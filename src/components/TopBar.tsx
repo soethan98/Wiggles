@@ -16,7 +16,7 @@ const TopBar = () => {
                 <Text style={styles.appBarSubtitle}>Adopt a new friend near you</Text>
             </View>
             <TouchableOpacity style={styles.iconContainer}>
-                <Icon name='lightbulb-on-outline' size={24} color={'#FFFFFF'} />
+                <Icon name='lightbulb-on-outline' size={24} color={colors.textPrimary} />
 
             </TouchableOpacity>
         </View>

@@ -5,9 +5,12 @@ import Icons from 'react-native-vector-icons/Fontisto'
 import Icon from 'react-native-vector-icons/Fontisto'
 import { COLORS } from '../constants'
 import DetailTitle from './DetailTitle'
+import useStyles from '../theme/useStyles'
+import createStyles from './ownerInfo.style'
 
 
 export default function OwnerInfo() {
+    const {colors,styles} = useStyles(createStyles)
     return (
         <View style={styles.container}>
             <DetailTitle title='Owner Info' />

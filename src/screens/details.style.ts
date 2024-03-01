@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../constants";
+import { TColors } from "../theme/colors";
 
 
 
-const styles = StyleSheet.create({
+const createStyles = (colors:TColors) => StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:COLORS.blueBGNight
+        backgroundColor:colors.background
     },
     storyContainer:{
         marginTop:SIZES.medium,
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
 
     },
     aboutMeLabel:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         fontSize:12,
         fontFamily:'Sailec-Regular',
         fontWeight:'400',
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         
     },
     storyText:{
-        color:COLORS.pinkText,
+        color:colors.textPrimary,
         paddingTop:SIZES.medium,
         fontSize:14,
         fontFamily:'Sailec-Medium',
@@ -35,4 +36,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default styles;
+export default createStyles;

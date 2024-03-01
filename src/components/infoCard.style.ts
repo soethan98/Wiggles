@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../constants";
+import { TColors } from "../theme/colors";
 
 
-const styles = StyleSheet.create({
+const createStyles =(colors:TColors) =>  StyleSheet.create({
     container: {
         width: 90,
         height: 90,
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'#162544'
+        backgroundColor:colors.surfaceDark
     },
     infoLabel: {
         fontSize:12,
@@ -22,10 +23,10 @@ const styles = StyleSheet.create({
         fontWeight:'600',
         fontSize: 16,
         fontFamily: 'Sailec-Medium',
-        color:COLORS.text
+        color:colors.textPrimary
 
     }
 })
 
 
-export default styles;
+export default createStyles;

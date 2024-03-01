@@ -4,9 +4,9 @@ export type ColorTheme = {
     textSecondary: string;
     textPrimary: string;
     background: string;
-    onBackground:string;
     surface: string;
     onSurface: string;
+    surfaceDark:string;
 
 }
 
@@ -32,9 +32,9 @@ const Colors: ColorPalettes = {
         textPrimary: '#1E3054',
         textSecondary: '#67686E',
         surface:'#FFFFFF',
-        onBackground:'',
         onSurface:'#1E3054',
         background:'#F4F7FD',
+        surfaceDark:'#F9F9F9',
         ...sharedColors,
     },
     dark: {
@@ -43,9 +43,9 @@ const Colors: ColorPalettes = {
         textPrimary: '#F5CAC9',
         textSecondary: '#9D5DB0',
         surface:'#162544',
-        onBackground:'',
         onSurface:'#F5CAC9',
         background:'#0C1B3A',
+        surfaceDark:'#162544',
         ...sharedColors,
     }
 }
