@@ -12,6 +12,7 @@ import OwnerInfo from '../components/OwnerInfo'
 import DetailTitle from '../components/DetailTitle'
 import useStyles from '../theme/useStyles'
 import createStyles from './details.style'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 
@@ -21,7 +22,8 @@ const Details = ({ navigation, route }: DetailProps) => {
     const { dog } = route.params
     const {colors,styles} = useStyles(createStyles)
     return (
-        <ScrollView style={styles.container}>
+        <SafeAreaView style = {{flex:1}}>
+ <ScrollView style={styles.container}>
             <View>
                 <DetailsImageBackdrop image={dog.image} navigation={navigation} />
                 <DogInfoCard dog={dog}/>
@@ -33,6 +35,8 @@ const Details = ({ navigation, route }: DetailProps) => {
                 <OwnerInfo />
             </View>
         </ScrollView>
+        </SafeAreaView>
+       
 
     )
 }

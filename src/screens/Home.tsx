@@ -1,4 +1,4 @@
-import { FlatList, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, Pressable, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { MainNavParamList } from '../../App'
@@ -18,7 +18,8 @@ export default function Home({ navigation }: HomeProps) {
 
     const {colors,styles} = useStyles(createStyles)
     return (
-        <View style = {styles.mainContainer}>
+        <SafeAreaView style = {{flex:1}}>
+ <View style = {styles.mainContainer}>
            <TopBar/>
            <Text style = {styles.nearByText}>Nearby results</Text>
            <FlatList
@@ -36,7 +37,10 @@ export default function Home({ navigation }: HomeProps) {
            )}
           />
         </View>
+    
+        </SafeAreaView>
     )
+       
 }
 
 
