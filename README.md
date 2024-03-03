@@ -6,13 +6,10 @@ Welcome to Wiggles, my personal React Native project created to dive into the wo
 
 Wiggles is a learning playground where I can explore, tinker, and gain hands-on experience in crafting beautiful and responsive user interfaces for mobile applications. It's a journey to enhance my skills in React Native development and create visually appealing apps.
 
-## Screenshots
+## Screenshots/Screencasr
 
-![Screenshot 1](./screenshots/screenshot1.png)
-*Caption for Screenshot 1*
+![](./screenshots/screencast.mp4)
 
-![Screenshot 2](./screenshots/screenshot2.png)
-*Caption for Screenshot 2*
 
 
 ...
